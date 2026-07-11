@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hotel Feedback Survey</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Hotel Feedback Survey</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve your experience at our hotel.
+      </p>
+
+      <form id="survey-form" method="POST" action="https://hotel-feedback.freecodecamp.org">
+        <fieldset>
+          <legend>Guest Information</legend>
+          <label id="name-label" for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+          <label id="email-label" for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+          <label id="number-label" for="number">Age:</label>
+          <input type="number" id="number" name="age" min="18" max="100" placeholder="Enter your age" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Stay Details</legend>
+          <label for="dropdown">Select your stay type:</label>
+          <select id="dropdown" name="stay">
+            <option value="business">Business Trip</option>
+            <option value="vacation">Vacation</option>
+            <option value="conference">Conference</option>
+          </select>
+
+          <p>Was this your first stay at our hotel?</p>
+          <label><input type="radio" name="first-stay" value="yes" /> Yes</label>
+          <label><input type="radio" name="first-stay" value="no" /> No</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Reasons for Choosing Us</legend>
+          <label><input type="checkbox" name="reason" value="location" /> Location</label>
+          <label><input type="checkbox" name="reason" value="price" /> Price</label>
+          <label><input type="checkbox" name="reason" value="reputation" /> Reputation</label>
+          <label><input type="checkbox" name="reason" value="recommendation" /> Recommendation</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ratings</legend>
+          <label for="service">Service:</label>
+          <select id="service" name="service">
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option value="excellent">Excellent</option>
+          </select>
+
+          <label for="food">Food:</label>
+          <select id="food" name="food">
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option value="excellent">Excellent</option>
+          </select>
+        </fieldset>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" cols="30" rows="5" placeholder="Share your thoughts..."></textarea>
+
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
