@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Pago</title>
+</head>
+<body>
+
+    <h1>Checkout</h1>
+
+    <section>
+        <h2>Your Cart</h2>
+        <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="Un cubo geométrico decorativo">
+    </section>
+
+    <section>
+        <h2>Payment Information</h2>
+        <form>
+            <div>
+                <label for="card-name">Nombre en la tarjeta <span aria-hidden="true">*</span></label>
+                <input type="text" id="card-name" name="card-name" required>
+            </div>
+
+            <div>
+                <label for="card-number">Número de tarjeta <span aria-hidden="true">*</span></label>
+                <input type="text" id="card-number" name="card-number" required aria-describedby="card-number-help">
+                <p id="card-number-help">El número debe tener 16 dígitos sin espacios.</p>
+            </div>
+
+            <button type="submit">Pagar</button>
+        </form>
+    </section>
+
+</body>
+</html>
